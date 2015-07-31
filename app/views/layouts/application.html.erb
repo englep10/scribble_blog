@@ -9,9 +9,9 @@
 <body>
   <div id="sidebar">
     <div id="logo">
-      <%= link_to root_path do %>
+      <!-- <%= link_to root_path do %>
         <%= image_tag "OA_logo_sm.png" %>
-      <% end %>
+      <% end %> -->
     </div>
     <ul>
       <li class="category">Website</li>
@@ -28,18 +28,17 @@
       <li><a href="mailto:englep10@gmail.com">Email</a></li>
     </ul>
   </div>
-
-  <p class="sign_in">Admin Login</a>
   <div id="main_content">
-    <div id="header"></div>
-      <p>All Posts</p>
-        <div class="buttons">
-          <button type="button" name="button"></button>
-        </div>
+  		<div id="header">
+  				<p>All Posts</p>
+  				<p>About</p>
 
-  </div>
-
-<%= yield %>
-
+  				<div class="buttons">
+  					<button class="button"><%= link_to "New Post", new_post_path %></button>
+  					<button class="button">Log Out</button>
+  				</div>
+  		</div>
+  		<%= yield %>
+  	</div>
 </body>
 </html>
